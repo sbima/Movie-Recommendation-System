@@ -9,14 +9,20 @@ Project Description:
 
 # Implementation:
 •	Used cuBLAS API: gpublasDgemm
+
  	To calculate the dot products of any intermediate results within the program in parallel on GPU Device.
 •	Used cuSOLVER Library: 
-This library does the QR decomposition to solve the linear system, which is Ax = B. Where A is a dense matrix with equal number of rows and columns.Main computations needed for this decomposition are done in parallel on Device.
+
+	This library does the QR decomposition to solve the linear system, which is Ax = B. Where A is a dense matrix with equal number of rows and columns.Main computations needed for this decomposition are done in parallel on Device.
+
 The code uses three steps:
+
 Step 1: A = Q*R by geqrf.
 Step 2: B := Q^T*B by ormqr.
 Step 3: solve R*X = B by trsm.
+
 Finally, x = R \ Q^T*B
+
 •	I have written a kernel named “trans” to find the Transpose of any 1-Dimensional matrix whenever necessary. 
 •	Trying to use OpenMP: 
 I tried to parallelize the main part of the program where I can do large amount of computations using OpenMP.
