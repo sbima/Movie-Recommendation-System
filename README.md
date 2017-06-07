@@ -3,4 +3,4 @@ Depending upon the ratings given to the multiple movies by the multiple users,
 
 I am using c based CUDA programming to parallelize the ALS(Alternating Least Squares) algorithm on GPU. ALS is the algorithm by using which the system decides what movies are to be recommended to a particular user.
 
-![alt text](https://ibb.co/iwbevv "Logo Title Text 1")
+![alt text](https://ibb.co/iwbevv "Weighted errors")
